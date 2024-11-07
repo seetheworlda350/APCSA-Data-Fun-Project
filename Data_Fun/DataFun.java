@@ -13,47 +13,75 @@ public class DataFun{
         System.out.println("Hi, please enter your favorite integer: ");
         int favInt = intInput.nextInt();
         if (favInt % 2 == 0){
-            System.out.println(favInt + " is even");
+            System.out.println(favInt + " is even,");
         } else {
-            System.out.println(favInt + " is odd");
+            System.out.println(favInt + " is odd,");
         }
         if (favInt >= 0){
-            System.out.println(favInt + " is positive");
+            System.out.println(favInt + " is a positive number,");
         } else if (favInt < 0){
-            System.out.println(favInt + " is negative");
+            System.out.println(favInt + " is a negative number,");
         } else {
-            System.out.println(favInt + " is zero");
+            System.out.println(favInt + " is zero,");
         }
         if (favInt > 1000){
-            System.out.println(favInt + " is greater than 1,000");
+            System.out.println(favInt + " is greater than 1,000,");
         }
         else if (favInt > 100){
-            System.out.println(favInt + " is greater than 100");
+            System.out.println(favInt + " is greater than 100,");
         } else if (favInt > 10) {
-            System.out.println(favInt + " is greater than 10");
+            System.out.println(favInt + " is greater than 10,");
         }
 
         switch (favInt){
             case 2:
-                System.out.println(favInt + "is the atomic number of the noble gas Helium");
+                System.out.println(favInt + " is the atomic number of the noble gas Helium.");
                 break;
             case 10:
-                System.out.println(favInt + "is the atomic number of the noble gas Neon");
+                System.out.println(favInt + " is the atomic number of the noble gas Neon.");
                 break;
             case 18:
-                System.out.println(favInt + "is the atomic number of the noble gas Argon");
+                System.out.println(favInt + " is the atomic number of the noble gas Argon.");
                 break;
             case 36:
-                System.out.println(favInt + "is the atomic number of the noble gas Krypton");
+                System.out.println(favInt + " is the atomic number of the noble gas Krypton.");
                 break;
             case 54:
-                System.out.println(favInt + "is the atomic number of the noble gas Xenon");
+                System.out.println(favInt + " is the atomic number of the noble gas Xenon.");
                 break;
             case 86:
-                System.out.println(favInt + "is the atomic number of the noble gas Radon");
+                System.out.println(favInt + " is the atomic number of the noble gas Radon.");
                 break;
-
+            default:
+                System.out.println(favInt + " is not the atomic number of a noble gas.");
         }
 
+        // SECOND PART
+        System.out.println("Please enter your favorite character: ");
+        char favChar = intInput.next().charAt(0);
+
+        if (Character.isLetter(favChar)){
+                if (Character.isLowerCase(favChar)) {
+                    System.out.println(favChar + " is a lowercase letter,");
+                }
+                else {
+                System.out.println(favChar + " is an uppercase letter,");
+                }
+                if (favChar == 'a' || favChar == 'e' || favChar == 'i' || favChar == 'o' || favChar == 'u'){
+                    System.out.println(favChar + " is a vowel,");
+                } else {
+                    System.out.println(favChar + " is not a vowel,");
+                }
+                char a = "a".charAt(0);
+                int ascii = (int) favChar;
+                System.out.println(favChar + "'s ASCII value is " + ascii+",");;
+                int alphabetStart = (int) a;
+                int position = ascii - alphabetStart + 1;
+                System.out.println("It is the " + position + " letter in the alphabet.");
+        } else
+        {
+            System.out.println(favChar + " is a numeric digit");
+        }
     }
+
 }

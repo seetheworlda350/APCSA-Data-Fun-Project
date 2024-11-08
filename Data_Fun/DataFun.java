@@ -67,18 +67,39 @@ public class DataFun{
                 else {
                 System.out.println(favChar + " is an uppercase letter,");
                 }
-                if (favChar == 'a' || favChar == 'e' || favChar == 'i' || favChar == 'o' || favChar == 'u'){
+                if (favChar == 'a' || favChar == 'e' || favChar == 'i' || favChar == 'o' || favChar == 'u' || favChar == 'A' || favChar == 'E' || favChar == 'I' || favChar == 'O' || favChar == 'U'){
                     System.out.println(favChar + " is a vowel,");
                 } else {
                     System.out.println(favChar + " is not a vowel,");
                 }
+            }
                 char a = "a".charAt(0);
+                char A = "A".charAt(0);
                 int ascii = (int) favChar;
                 System.out.println(favChar + "'s ASCII value is " + ascii+",");;
+                String suffix = "";
                 int alphabetStart = (int) a;
-                int position = ascii - alphabetStart + 1;
-                System.out.println("It is the " + position + " letter in the alphabet.");
-        } else
+                int alphabetStartCapital = (int) A;
+                if (Character.isLowerCase(favChar)){
+                    int position = ascii - alphabetStart + 1;
+                    if (position == 1){
+                        suffix = "st";
+                    }
+                    if (position == 2){
+                        suffix = "nd";
+                    }
+                    if (position == 3){
+                        suffix = "rd";
+                    }
+                    if (position > 3){
+                        suffix = "th";
+                    }
+                    System.out.println("It is the " + position + suffix + " letter in the alphabet.");
+                } else if (Character.isUpperCase(favChar)){
+                    int position = ascii - alphabetStartCapital + 1;
+                    System.out.println("It is the " + position + suffix + " letter in the alphabet.");
+                }
+        else
         {
             System.out.println(favChar + " is a numeric digit");
         }

@@ -12,11 +12,6 @@ public class DataFun{
         Scanner intInput = new Scanner(System.in);
         System.out.println("Hi, please enter your favorite integer: ");
         int favInt = intInput.nextInt();
-        if (favInt % 2 == 0){
-            System.out.println(favInt + " is even,");
-        } else {
-            System.out.println(favInt + " is odd,");
-        }
         if (favInt >= 0){
             System.out.println(favInt + " is a positive number,");
         } else if (favInt < 0){
@@ -32,7 +27,11 @@ public class DataFun{
         } else if (favInt > 10) {
             System.out.println(favInt + " is greater than 10,");
         }
-
+        if (favInt % 2 == 0){
+            System.out.println(favInt + " is even,");
+        } else {
+            System.out.println(favInt + " is odd,");
+        }
         switch (favInt){
             case 2:
                 System.out.println(favInt + " is the atomic number of the noble gas Helium.");
@@ -97,6 +96,18 @@ public class DataFun{
                     System.out.println("It is the " + position + suffix + " letter in the alphabet.");
                 } else if (Character.isUpperCase(favChar)){
                     int position = ascii - alphabetStartCapital + 1;
+                    if (position == 1){
+                        suffix = "st";
+                    }
+                    if (position == 2){
+                        suffix = "nd";
+                    }
+                    if (position == 3){
+                        suffix = "rd";
+                    }
+                    if (position > 3){
+                        suffix = "th";
+                    }
                     System.out.println("It is the " + position + suffix + " letter in the alphabet.");
                 }
         else

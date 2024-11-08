@@ -2,7 +2,9 @@
 import java.util.Scanner;
 
 /**
- * Description goes here
+ * This is a program that takes the user's favorite integer and character and performs various operations on them including,
+ * 1. Determining if the integer is positive, negative, or zero.
+ * 2. Determining if the integer is greater than 1,000, 100, or 10.
  * @author [Eshaan Rana]
  * @version [11/5/2024]
  */
@@ -75,7 +77,7 @@ public class DataFun{
                 char a = "a".charAt(0);
                 char A = "A".charAt(0);
                 int ascii = (int) favChar;
-                System.out.println(favChar + "'s ASCII value is " + ascii+",");;
+                System.out.println(favChar + "'s ASCII value is " + ascii+",");
                 String suffix = "";
                 int alphabetStart = (int) a;
                 int alphabetStartCapital = (int) A;

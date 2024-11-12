@@ -57,7 +57,7 @@ public class DataFun{
                 System.out.println(favInt + " is not the atomic number of a noble gas.");
         }
 
-        // SECOND PART
+                                // SECOND PART
         System.out.println("Please enter your favorite character: ");
         char favChar = intInput.next().charAt(0);
 
@@ -77,7 +77,7 @@ public class DataFun{
                 char a = "a".charAt(0);
                 char A = "A".charAt(0);
                 int ascii = (int) favChar;
-                System.out.println(favChar + "'s ASCII value is " + ascii+",");
+                System.out.println(favChar + " has an ASCII value of " + ascii+",");
                 String suffix = "";
                 int alphabetStart = (int) a;
                 int alphabetStartCapital = (int) A;
@@ -117,5 +117,4 @@ public class DataFun{
             System.out.println(favChar + " is a numeric digit");
         }
     }
-
 }
